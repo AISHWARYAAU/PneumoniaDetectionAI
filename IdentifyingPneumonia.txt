@@ -1,0 +1,10 @@
+How to identify pneumonia in x-ray:
+-loss of heart border
+-loss of the diaphragm
+-loss of the costrophrenic angle
+-pattern of the infiltrates
+
+If first three points are true then pnemonia is present.
+
+Later Include x-ray for tooth decay.
+
