@@ -6,5 +6,5 @@ How to identify pneumonia in x-ray:
 
 If first three points are true then pnemonia is present.
 
-Later Include x-ray for tooth decay.
+
 
