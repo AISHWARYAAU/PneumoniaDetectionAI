@@ -208,11 +208,11 @@ plt.show()
 import streamlit as st
 import numpy as np
 from PIL import Image 
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 import tensorflow as tf
  
 from tempfile import NamedTemporaryFile
-from tensorflow.keras.preprocessing import image 
+from keras.preprocessing import image 
 
 #st.set_option('deprecation.showfileUploaderEncoding', False)
 #@st.cache(allow_output_mutation=True)
@@ -221,24 +221,24 @@ def loading_model():
   fp = "cnn_pneu_vamp_model.h5"
   model_loader = load_model(fp)
   return model_loader
-one_hot_encoder = OneHotEncoder(sparse=False)
+
 cnn = loading_model()
 temp_file = NamedTemporaryFile(delete=False)
 #temp_file.write('../PneumoniaDetectionAI/chest_xray/test/NORMAL/IM-0001-0001.jpeg')
 
-hardik_img = image.load_img("C:/Users/araiz/Desktop/PneumoniaDetectionProject/PneumoniaDetectionAI/chest_xray/test/NORMAL/IM-0001-0001.jpeg", target_size=(500, 500),color_mode='grayscale')
+loaded_img = image.load_img("C:/Users/ahmed/Downloads/IM-0003-0001.jpeg", target_size=(500, 500),color_mode='grayscale')
 # Preprocessing the image
-pp_hardik_img = image.img_to_array(hardik_img)
-pp_hardik_img = pp_hardik_img/255
-pp_hardik_img = np.expand_dims(pp_hardik_img, axis=0)
+pp_loaded_img = image.img_to_array(loaded_img)
+pp_loaded_img = pp_loaded_img/255
+pp_loaded_img = np.expand_dims(pp_loaded_img, axis=0)
 #predict
-hardik_preds= cnn.predict(pp_hardik_img)
-print(hardik_preds)
-if hardik_preds>= 0.5:
-    print('I am {:.2%} percent confirmed that this is a Pneumonia case'.format(hardik_preds[0][0]))
+image_preds= cnn.predict(pp_loaded_img)
+print(image_preds)
+if image_preds>= 0.5:
+    print('I am {:.2%} percent confirmed that this is a Pneumonia case'.format(image_preds[0][0]))
 
 else: 
-    print('I am {:.2%} percent confirmed that this is a Normal case'.format(1-hardik_preds[0][0]))
+    print('I am {:.2%} percent confirmed that this is a Normal case'.format(1-image_preds[0][0]))
 
 
 #st.success(out)
