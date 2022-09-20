@@ -1,11 +1,11 @@
 import streamlit as st
 import numpy as np
 from PIL import Image 
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import tensorflow as tf
  
 from tempfile import NamedTemporaryFile
-from keras.preprocessing import image 
+from tensorflow.keras.preprocessing import image 
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache(allow_output_mutation=True)
