@@ -18,7 +18,7 @@ def loading_model():
 cnn = loading_model()
 st.write("""
 # Pnemonia Detector
-by Ahmedh Shamsudeen and Araiz Asad :thumbsup
+by Ahmedh Shamsudeen and Araiz Asad :thumbsup:
 """)
 
 temp = st.file_uploader("Upload A Chest X-Ray Image")
