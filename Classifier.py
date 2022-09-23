@@ -10,12 +10,6 @@ from tensorflow.keras.preprocessing import image
 st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache(allow_output_mutation=True)
 
-[theme]
-primaryColor="#F63366"
-backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
-textColor="#262730"
-font="sans serif"
 
 def loading_model():
   fp = "cnnModel.h5"
