@@ -16,6 +16,10 @@ def loading_model():
   return model_loader
 
 cnn = loading_model()
+
+filler_image = Image.open('AIface.jpeg')
+st.image(filler_image)
+
 st.write("""
 # Pnemonia Detector
 by Ahmedh Shamsudeen and Araiz Asad :thumbsup:
