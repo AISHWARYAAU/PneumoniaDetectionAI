@@ -28,10 +28,11 @@ st.image(filler_image)
 st.write("Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus, causing cough with phlegm or pus, fever, chills, and difficulty breathing.\n\n\nSource: https://www.mayoclinic.org/diseases-conditions/pneumonia/symptoms-causes/syc-20354204#:~:text=Pneumonia%20is%20an%20infection%20that,and%20fungi%2C%20can%20cause%20pneumonia.") 
 
 temp = st.file_uploader("Upload A Chest X-Ray Image")
+st.write("Link to chest X-ray Dataset for testing purposes if needed https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia")
 
 buffer = temp
 temp_file = NamedTemporaryFile(delete=False)
-#temp_file.write('../PneumoniaDetectionAI/chest_xray/test/NORMAL/IM-0001-0001.jpeg')
+
 
 if buffer:
   temp_file.write(buffer.getvalue())
