@@ -22,7 +22,7 @@ st.image(filler_image)
 
 st.write("""
 # Pnemonia Detector
-by Ahmedh Shamsudeen and Araiz Asad :bowtie:
+by Ahmedh Shamsudeen and Araiz Asad :sunglasses:
 """)
 
 temp = st.file_uploader("Upload A Chest X-Ray Image")
