@@ -19,9 +19,10 @@ cnn = loading_model()
 
 filler_image = Image.open('AIface.jpeg')
 st.image(filler_image)
+st.write("Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus (purulent material), causing cough with phlegm or pus, fever, chills, and difficulty breathing. A variety of organisms, including bacteria, viruses and fungi, can cause pneumonia.") 
 
 st.write("""
-# Pnemonia Detector
+# Pneumonia Detector
 by Ahmedh Shamsudeen and Araiz Asad :sunglasses:
 """)
 
