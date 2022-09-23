@@ -40,7 +40,7 @@ if buffer is None:
   st.text("Oops! that doesn't look like an image. Try again.")
 
 else:
-  loaded_img = image.load_img("../input/chest-xray-pneumonia/chest_xray/test/PNEUMONIA/person103_bacteria_489.jpeg", target_size=(500, 500),color_mode='grayscale')
+  loaded_img = image.load_img(temp_file.name, target_size=(500, 500),color_mode='grayscale')
   # Preprocessing the image
   pp_loaded_img = image.img_to_array(loaded_img)
   pp_loaded_img = pp_loaded_img/255
